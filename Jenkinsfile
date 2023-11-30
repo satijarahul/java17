@@ -11,16 +11,16 @@ node {
        stage('Build Code')
        {
        	 dir("."){
-             sh "pwd"
-             sh 'mvn clean package -Dmaven.test.skip=true'
+             bat "pwd"
+             bat 'mvn clean package -Dmaven.test.skip=true'
          }
 
        }
         stage('Run Unit Tests')
          {
 			dir("."){
-				sh "pwd"
-                sh 'mvn test'
+				bat "pwd"
+                bat 'mvn test'
             }
         }
     }
