@@ -11,7 +11,6 @@ node {
        stage('Build Code')
        {
        	 dir("."){
-             bat "pwd"
              bat 'mvn clean package -Dmaven.test.skip=true'
          }
 
@@ -19,8 +18,7 @@ node {
         stage('Run Unit Tests')
          {
 			dir("."){
-				bat "pwd"
-                bat 'mvn test'
+			    bat 'mvn test'
             }
         }
     }
