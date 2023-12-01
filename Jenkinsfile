@@ -32,11 +32,11 @@ node {
     {
         if (currentBuild.result == "FAILURE")
         {
- 			sh 'echo "Build Failed"'
+ 			bat 'echo "Build Failed"'
         }
         else 
         { 
-        	sh 'echo "Build Success"'
+        	bat 'echo "Build Success"'
         }
     }
 }
