@@ -10,16 +10,16 @@ node {
 
        stage('Build Code')
        {
-       	  withMaven(traceability: true,maven:'Maven_HOME' ,jdk:'jdk'){
+
              bat 'mvn clean package -Dmaven.test.skip=true'
-         }
+
 
        }
         stage('Run Unit Tests')
          {
-			withMaven(traceability: true,maven:'Maven_HOME' , jdk:'jdk'){
+
 			    bat 'mvn test'
-            }
+           
         }
     }
 
