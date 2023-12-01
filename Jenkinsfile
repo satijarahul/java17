@@ -10,16 +10,11 @@ node {
 
        stage('Build Code')
        {
-       	 {
-             bat 'mvn clean package -Dmaven.test.skip=true'
-         }
-
+           bat 'mvn clean package -Dmaven.test.skip=true'
        }
         stage('Run Unit Tests')
          {
-			{
 			    bat 'mvn test'
-            }
         }
     }
 
