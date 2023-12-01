@@ -10,7 +10,7 @@ node {
 
        stage('Build Code')
        {
-       	  withMaven(traceability: true){
+       	  withMaven(traceability: true,maven:'Maven_HOME'){
              bat 'mvn clean package -Dmaven.test.skip=true'
          }
 
