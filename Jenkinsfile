@@ -10,14 +10,14 @@ node {
 
        stage('Build Code')
        {
-       	  withMaven(traceability: true,maven:'Maven_HOME'){
+       	 {
              bat 'mvn clean package -Dmaven.test.skip=true'
          }
 
        }
         stage('Run Unit Tests')
          {
-			withMaven(traceability: true){
+			{
 			    bat 'mvn test'
             }
         }
