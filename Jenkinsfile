@@ -17,7 +17,7 @@ node {
        }
         stage('Run Unit Tests')
          {
-			dir("."){
+			withMaven(traceability: true){
 			    bat 'mvn test'
             }
         }
