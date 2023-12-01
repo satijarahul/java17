@@ -10,11 +10,11 @@ node {
 
        stage('Build Code')
        {
-           bat 'mvn clean package -Dmaven.test.skip=true'
+           bat 'C:\Program Files\apache-maven-3.9.5\bin\mvn clean package -Dmaven.test.skip=true'
        }
         stage('Run Unit Tests')
          {
-			    bat 'mvn test'
+			    bat 'C:\Program Files\apache-maven-3.9.5\bin\mvn test'
         }
     }
 
